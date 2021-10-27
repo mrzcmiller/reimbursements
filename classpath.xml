@@ -6,6 +6,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src/main/resources/META-INF"/>
+	<classpathentry kind="src" path="src/main/resources/public"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -36,5 +38,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Zachary C. Miller/Documents/Revature/Training/Jars/postgresql-42.2.24.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate"/>
+	<classpathentry kind="lib" path="C:/Users/Zachary C. Miller/Documents/Revature/Training/Jars/log4j.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
