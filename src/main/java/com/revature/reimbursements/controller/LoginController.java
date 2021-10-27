@@ -1,23 +1,33 @@
 package com.revature.reimbursements.controller;
 
-import com.revature.reimbursements.entity.Employee;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
-import io.javalin.http.Handler;
+import com.revature.reimbursements.DAO.UserDAO;
+import com.revature.reimbursements.entity.User;
 
 public class LoginController {
+	private final static Logger logger = LogManager.getLogger(LoginController.class);
 	
-    public static Handler serveLoginPage = ctx -> {
-    	ctx.redirect("/login.html");
-    };
-    
-    
-    public static Handler handleLoginPost = ctx -> {
-        if (!EmployeeController.authenticate(ctx.formParam("username"), ctx.formParam("password"))) {
-            ctx.html("User authentication failed.");
-        } else {
-        	 Employee.currentUser =  Integer.parseInt(ctx.formParam("username"));
-        	 ctx.redirect("/requests.html");
+	public static boolean authenticate(String username, String password) {
+        if (username == null || password == null) {
+        	logger.info("Username or Password was empty.");
+        	return false;
         }
-    };
+        User user = UserDAO.getUserByUsername(Integer.parseInt(username));
+        if (user == null) {
+        	logger.info("Username was not found.");
+            return false;
+        }
+        
+        if (password.equals(user.getPassword())) {
+        	return true;
+        } else {
+        	logger.info("Passwords did not match.");
+        	return false;
+        }
+       
+    }
+
 }
 

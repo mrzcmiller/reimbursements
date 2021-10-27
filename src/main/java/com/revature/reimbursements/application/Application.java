@@ -3,15 +3,19 @@ package com.revature.reimbursements.application;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.revature.reimbursements.DAO.UserDAO;
-import com.revature.reimbursements.controller.EmployeeController;
-import com.revature.reimbursements.controller.LoginController;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
+import com.revature.reimbursements.DAO.UserDAO;
+import com.revature.reimbursements.service.LoginService;
+import com.revature.reimbursements.service.RequestService;
 
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 
 public class Application {
+	private final static Logger logger = LogManager.getLogger(Application.class);
+	
 	
 	private static EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
 			.createEntityManagerFactory("reimbursements");
@@ -19,6 +23,7 @@ public class Application {
 	public static UserDAO userDao;
 
 	public static void main(String[] args) {
+		
 		userDao = new UserDAO();
 		
 	       
@@ -26,15 +31,19 @@ public class Application {
 			config.addStaticFiles("/public", Location.CLASSPATH);
 		}).start(7000);
 		
-			app.get("/index", LoginController.serveLoginPage);
-			app.post("/login", LoginController.handleLoginPost);
-			app.get("/requests", EmployeeController.serveRequestsPage);
-			app.post("/requests", EmployeeController.addRequest);
-			app.get("/management", EmployeeController.managementView);
-			app.post("/management", EmployeeController.requestStatus);
+		logger.info("Javalin started");
+		
+			
+			app.post("/login", LoginService.handleLoginPost);
+			app.get("/requests", RequestService.serveRequestsPage);
+			app.post("/requests", RequestService.addRequest);
+			app.get("/management", RequestService.managementView);
+			app.post("/management", RequestService.updateRequestStatus);	
 
 		
 		ENTITY_MANAGER_FACTORY.close();
+		logger.info("ENTITY_MANAGER_FACTORY has been closed");
+		logger.info("End of Main()");
 	}
-
+	
 }

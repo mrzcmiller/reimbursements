@@ -16,7 +16,7 @@
     			value="org.postgresql.Driver" />
     		<property 
     			name="javax.persistence.jdbc.url"
-    			value="jdbc:postgresql://localhost:5432/test" />
+    			value="jdbc:postgresql://revature.cb9kjuhkayd5.us-east-2.rds.amazonaws.com:5432/postgres" />
     		<property 
     			name="javax.persistence.jdbc.user"
     			value="postgres" />
