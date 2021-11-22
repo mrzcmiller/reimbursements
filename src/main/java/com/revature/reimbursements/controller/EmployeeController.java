@@ -25,10 +25,11 @@ public class EmployeeController {
 	}
 	
 	
-	public void addRequestEmployeeDAO(int employeeID, String description, double amount) {
+	public String addRequestEmployeeDAO(String jsonFromForm) {
 		logger.info("Entering addRequestEmployeeDAO() method.");
 		EmployeeDAO dao = new EmployeeDAO(); //New EmployeeDAO object
-		dao.addRequest(employeeID, description, amount);
+		String result = dao.addRequest(jsonFromForm);
+		return result;
 	}
 	
 	
@@ -41,11 +42,11 @@ public class EmployeeController {
 	}
 	
 	
-	public void updateRequestStatusToEmployeeController(long requestID, String decision) {
+	public void updateRequestStatusToEmployeeController(long requestID, String decision, String comments) {
 		logger.info("Entering updateRequestStatusToEmployeeController() method in EmployeeController.");
 		EmployeeDAO dao = new EmployeeDAO();
 		logger.info("Sending status update to EmployeeDAO");
-		dao.updateRequest(requestID, decision);
+		dao.updateRequest(requestID, decision, comments);
 	}
 		
 		

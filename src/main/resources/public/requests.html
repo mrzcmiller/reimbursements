@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+        th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
+    </head>
+<body>
+	
+<div id="body">
+
+
+<div style='padding-bottom: 50px'>
+<aside style='float: left' id="managementView"></aside> 
+<aside style='float: right'><a href="/login.html">Log Out</a></aside>
+ </div> 
+	    
+
+<form id="test" name="newRequest" onsubmit="return sendNewRequest();">
+	<label><b>New Expense Reimbursement Request:</b></label>
+  	<div class="request" id="requestForm"></div>
+ </form>
+  
+  <div id="myData" align="center"></div>
+  
+
+    
+    
+</div>
+</body>
+
+<script>
+getRequests();
+  	
+  		async function getRequests() {
+  			fetch('/requests')
+	            .then(function (response) {
+	   				return response.json();
+	            })
+	            .then(function (data) {
+	                appendData(data);
+	            })
+	            .catch(function (err) {
+	                console.log('error: ' + err);
+	            });
+  		}
+  		
+	        function appendData(data) {
+	        	
+	        	let col = [];
+	        	for (let c = 0; c < 1; c++) {
+	                for (let key in data[c]) {
+	                    if (col.indexOf(key) === -1) {
+	                        col.push(key);
+	                    }
+	                }
+	            }
+	        	
+	        	if (col.length == 0) {
+	        		document.getElementById("myData").innerHTML = "You do not have any reimbursement requests.";
+	        	}
+	        	
+	        	else {
+	        	
+	        	let table = document.createElement("table");
+	        	let tableRow = table.insertRow(-1);
+	        	
+	        	
+	        	for (let h = 0; h < col.length; h++) {
+	                let header = document.createElement("th");
+	                header.innerHTML = col[h];
+	                tableRow.appendChild(header);
+	            }
+	        	
+	        	
+	        	for (let r = 0; r < data.length; r++) {
+	        		tableRow = table.insertRow(-1);
+	        		for (let d = 0; d < col.length; d++) {
+	        			let tableData = tableRow.insertCell(-1);
+	                    tableData.innerHTML = data[r][col[d]];
+	        		}
+	            }
+	        	
+	        	
+	        	let mainContainer = document.getElementById("myData");
+	        	mainContainer.innerHTML = "";
+	        	mainContainer.appendChild(table);
+	        	
+	        	}
+	        	
+	        	let employeeID = getEmployeeID();
+	        	getForm(employeeID);
+	        	
+	        	
+	        	getManagementView();
+	    		
+	    		
+	        	function getEmployeeID() {
+	            	let employeeID = data[0][col[1]];
+	            	return employeeID;
+	            }
+	        	
+	        	function getForm(employeeID) {
+	            	let viewForm = document.getElementById("requestForm");
+	            	viewForm.innerHTML = 
+	            		"Description: <input type='text' placeholder='Expense Description:' name='description' required>" +
+	            		"Amount: $<input type='number' step='0.01' placeholder='Enter Amount:' name='amount' required>" +
+	            		"<input type='hidden' name='employeeID' value=" + employeeID +">" +
+	            		"<input type='submit' value='Submit'>"
+	            }
+	            
+	            function getManagementView() {
+	            	let mView = document.getElementById("managementView");
+	            	if (employeeID.toString()[0] == "1") {
+	            	mView.innerHTML = "<a href='/management.html'>Management View</a>";
+	            	}
+	            }
+	        }   
+	        
+	    
+	    function sendNewRequest() {  
+	    	let form = document.forms["newRequest"];
+	    	let employeeID = document.forms["newRequest"]["employeeID"].value;
+	    	let description = document.forms["newRequest"]["description"].value;
+	    	let amount = document.forms["newRequest"]["amount"].value;
+	        
+	    	fetch('/requests', {
+	        	 method: 'POST',
+	        	 headers: {
+	        		 'Content-Type': 'application/json;charset=utf-8'
+	        	 },
+	        	 body: JSON.stringify({
+	        		 employeeID: employeeID,
+	        		 description: description,
+	        		 amount: amount
+	        	})
+	    	});
+	    	document.getElementById("test").reset();
+	    	setTimeout(function() {
+	    		getRequests();
+	    	}, 1000);
+	    	return false;
+	    }  	
+
+	   
+	        
+</script>
+</html>
+

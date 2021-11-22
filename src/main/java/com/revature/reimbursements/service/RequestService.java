@@ -11,7 +11,7 @@ import com.revature.reimbursements.entity.Employee;
 import io.javalin.http.Handler;
 
 public class RequestService {
-	private final static Logger logger = LogManager.getLogger(EmployeeController.class);
+	private final static Logger logger = LogManager.getLogger(RequestService.class);
 	
 	
 	public static Handler serveRequestsPage = ctx -> {
@@ -24,10 +24,10 @@ public class RequestService {
 	
 	public static Handler addRequest = ctx -> {
 		logger.info("Entering 'addRequest' Handler.");
-		int employeeID = Integer.parseInt(ctx.formParam("employeeID"));
+		logger.info(ctx.body());
+		String jsonFromForm = ctx.body();
 		EmployeeController employeeController = new EmployeeController();
-		employeeController.addRequestEmployeeDAO(employeeID, ctx.formParam("description"), Double.parseDouble(ctx.formParam("amount")));
-		ctx.redirect("/requests.html");
+		ctx.result(employeeController.addRequestEmployeeDAO(jsonFromForm));
 	};
 	
 	
@@ -44,9 +44,10 @@ public class RequestService {
 		logger.info("Entering 'updateRequestStatus' Handler.");
 		long requestID = Long.parseLong(ctx.formParam("requestID"));
 		String decision = ctx.formParam("update");
+		String comments = ctx.formParam("comments");
 		EmployeeController employeeController = new EmployeeController();
 		logger.info("Sending status update to EmployeeController");
-		employeeController.updateRequestStatusToEmployeeController(requestID, decision);
+		employeeController.updateRequestStatusToEmployeeController(requestID, decision, comments);
 		logger.info("Sending updated status to /management.html");
 		ctx.redirect("/management.html");
 	};

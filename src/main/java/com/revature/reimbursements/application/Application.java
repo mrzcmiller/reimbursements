@@ -17,7 +17,7 @@ public class Application {
 	private final static Logger logger = LogManager.getLogger(Application.class);
 	
 	
-	private static EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
+	public static EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
 			.createEntityManagerFactory("reimbursements");
 	
 	public static UserDAO userDao;
@@ -41,9 +41,8 @@ public class Application {
 			app.post("/management", RequestService.updateRequestStatus);	
 
 		
-		ENTITY_MANAGER_FACTORY.close();
-		logger.info("ENTITY_MANAGER_FACTORY has been closed");
-		logger.info("End of Main()");
+		
+//		logger.info("End of Main()");
 	}
 	
 }

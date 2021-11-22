@@ -1,5 +1,6 @@
 package com.revature.reimbursements.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,9 +13,13 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private long id;
+	@Column
     private int username;
+	@Column
     private String password;
+	@Column
     private static boolean isManager;
 
     public int getUsername() {

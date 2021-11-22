@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="management.css">
+    </head>
+<body>
+<a href='/requests.html'>My Requests</a>
+<aside style='float: right'><a href='/login.html'>Log Out</a></aside>
+
+<h2>Requests</h2>
+
+
+  
+  <div id="myData"></div>
+  
+  <script>
+	    
+        fetch('/management')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+            	window.location.replace("/login");
+                console.log('error: ' + err);
+            });
+       
+        function appendData(data) {
+        	
+        	let col = [];
+        	for (let c = 0; c < 1; c++) {
+                for (let key in data[c]) {
+                    if (col.indexOf(key) === -1) {
+                        col.push(key);
+                    }
+                }
+            }
+        	
+        	let table = document.createElement("table");
+        	let tableRow = table.insertRow(-1);
+        	
+        	
+        	for (let h = 0; h < col.length+2; h++) {
+                let header = document.createElement("th");
+                if(h<col.length) {
+                header.innerHTML = col[h];
+                tableRow.appendChild(header);
+                } else {
+                	header.innerHTML = " ";
+                	tableRow.appendChild(header);
+                }
+            }
+        	
+        	
+        	for (let r = 0; r < data.length; r++) {
+        		tableRow = table.insertRow(-1);
+        		for (let d = 0; d < col.length+2; d++) {
+        			let tableData = tableRow.insertCell(-1);
+        			if(d < col.length) {
+                    	tableData.innerHTML = data[r][col[d]];
+        			} else if (d == col.length) {
+        				tableData.innerHTML = "<form action='/management' method='post'><input type='hidden' name='requestID' value='" + data[r][col[0]] + "'><button name='update' value='APPROVED' type='submit'>Approve</button></form>"
+        			} else {
+        				tableData.innerHTML = "<form class='comment' action='/management' method='post'><input type='hidden' name='requestID' value='" + data[r][col[0]] + "'><input class='reason' type='text' name='comments'><button name='update' value='DENIED' type='submit'>Deny</button></form>"
+        			}
+        		}
+        		
+            }
+        	
+        	
+        	let mainContainer = document.getElementById("myData");
+        	
+        	mainContainer.appendChild(table);
+        	
+        }
+        
+  
+        
+    </script>
+  
+</body>
+</html>
+
+
+
+<!--  
+<!DOCTYPE html>
+<html>
+<body>
+document.write('This part is working');
+document.write('Inside the script');
+async function asyncFunc() {
+	let response = await fetch(/results);
+	let text = await response.text(); 
+	document.write(text);
+}
+document.write('Calling the function');
+asyncFunc();
+
+document.write('Leaving the script');
+</body>
+</html>
+-->

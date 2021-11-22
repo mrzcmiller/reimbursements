@@ -10,7 +10,7 @@ import io.javalin.http.Handler;
 
 public class LoginService {
 	public static boolean requireLogin = true;
-	private final static Logger logger = LogManager.getLogger(LoginController.class);
+	private final static Logger logger = LogManager.getLogger(LoginService.class);
 	
 	public static Handler handleLoginPost = ctx -> {
     	logger.info("Entering handleLoginPost Handler.");

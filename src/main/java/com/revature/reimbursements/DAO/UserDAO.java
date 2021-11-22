@@ -30,7 +30,7 @@ public class UserDAO {
 			return user;
 		}
 		catch(NoResultException e) {
-			logger.info("No user found with username " + user.getUsername() + ".");
+			logger.info("No user found with username " + username + ".");
 			e.printStackTrace();
 		}
 			
