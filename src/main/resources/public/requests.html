@@ -27,9 +27,9 @@
  </div> 
 	    
 
-<form id="test" name="newRequest" onsubmit="return sendNewRequest();">
+<form id="requestForm" name="newRequest" onsubmit="return sendNewRequest();">
 	<label><b>New Expense Reimbursement Request:</b></label>
-  	<div class="request" id="requestForm"></div>
+  	<div class="request" id="requestFormDiv"></div>
  </form>
   
   <div id="myData" align="center"></div>
@@ -112,12 +112,13 @@ getRequests();
 	            }
 	        	
 	        	function getForm(employeeID) {
-	            	let viewForm = document.getElementById("requestForm");
+	        		console.log("Entering getForm()")
+	            	let viewForm = document.getElementById("requestFormDiv");
 	            	viewForm.innerHTML = 
 	            		"Description: <input type='text' placeholder='Expense Description:' name='description' required>" +
-	            		"Amount: $<input type='number' step='0.01' placeholder='Enter Amount:' name='amount' required>" +
+	            		"&emsp;Amount:&nbsp;$ <input type='number' step='0.01' placeholder='Enter Amount:' name='amount' required>" +
 	            		"<input type='hidden' name='employeeID' value=" + employeeID +">" +
-	            		"<input type='submit' value='Submit'>"
+	            		"&emsp;<input type='submit' value='Submit'>"
 	            }
 	            
 	            function getManagementView() {
@@ -146,7 +147,7 @@ getRequests();
 	        		 amount: amount
 	        	})
 	    	});
-	    	document.getElementById("test").reset();
+	    	document.getElementById("requestForm").reset();
 	    	setTimeout(function() {
 	    		getRequests();
 	    	}, 1000);

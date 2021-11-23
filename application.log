@@ -427,3 +427,247 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation "hibernate_sequenc
 2021-11-22 18:34:41 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39aa45a1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 2021-11-22 18:34:41 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2021-11-22 18:34:41 INFO  Application:34 - Javalin started
+2021-11-22 18:39:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: reimbursements]
+2021-11-22 18:39:47 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.0.Final
+2021-11-22 18:39:47 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-22 18:39:48 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-11-22 18:39:48 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2021-11-22 18:39:48 INFO  pooling:124 - HHH10001001: Connection properties: {user=postgres, password=****}
+2021-11-22 18:39:48 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-11-22 18:39:48 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-11-22 18:39:48 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-11-22 18:39:49 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@240139e1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-11-22 18:39:49 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 18:39:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: reimbursements]
+2021-11-22 18:39:49 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-11-22 18:39:49 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2021-11-22 18:39:49 INFO  pooling:124 - HHH10001001: Connection properties: {user=postgres, password=****}
+2021-11-22 18:39:49 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-11-22 18:39:49 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-11-22 18:39:49 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-11-22 18:39:49 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39aa45a1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-11-22 18:39:49 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 18:39:49 INFO  Application:34 - Javalin started
+2021-11-22 18:41:50 INFO  LoginService:16 - Entering handleLoginPost Handler.
+2021-11-22 18:41:51 INFO  UserDAO:29 - Username match found.
+2021-11-22 18:41:51 INFO  LoginService:23 - Authentication successful. Redirected to '/requests.html'
+2021-11-22 18:41:51 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 18:41:51 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 18:41:51 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 18:41:51 INFO  EmployeeDAO:70 - 11111111 has 0 reimbursement requests.
+2021-11-22 18:44:26 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 18:44:26 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 18:44:26 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 18:44:26 INFO  EmployeeDAO:70 - 11111111 has 0 reimbursement requests.
+2021-11-22 18:44:30 INFO  LoginService:16 - Entering handleLoginPost Handler.
+2021-11-22 18:44:30 INFO  UserDAO:29 - Username match found.
+2021-11-22 18:44:30 INFO  LoginService:23 - Authentication successful. Redirected to '/requests.html'
+2021-11-22 18:44:30 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 18:44:30 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 18:44:30 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 18:44:30 INFO  EmployeeDAO:70 - 11111111 has 0 reimbursement requests.
+2021-11-22 18:52:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: reimbursements]
+2021-11-22 18:52:49 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.6.0.Final
+2021-11-22 18:52:49 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-22 18:52:49 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-11-22 18:52:49 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2021-11-22 18:52:49 INFO  pooling:124 - HHH10001001: Connection properties: {user=postgres, password=****}
+2021-11-22 18:52:49 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-11-22 18:52:49 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-11-22 18:52:50 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-11-22 18:52:50 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@240139e1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-11-22 18:52:50 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 18:52:50 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: reimbursements]
+2021-11-22 18:52:50 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-11-22 18:52:50 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2021-11-22 18:52:50 INFO  pooling:124 - HHH10001001: Connection properties: {user=postgres, password=****}
+2021-11-22 18:52:50 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-11-22 18:52:50 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-11-22 18:52:51 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-11-22 18:52:51 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39aa45a1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-11-22 18:52:51 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-22 18:52:51 INFO  Application:34 - Javalin started
+2021-11-22 18:52:56 INFO  LoginService:16 - Entering handleLoginPost Handler.
+2021-11-22 18:52:57 INFO  UserDAO:29 - Username match found.
+2021-11-22 18:52:57 INFO  LoginService:23 - Authentication successful. Redirected to '/requests.html'
+2021-11-22 18:52:57 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 18:52:57 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 18:52:57 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 18:52:57 INFO  EmployeeDAO:70 - 11111111 has 0 reimbursement requests.
+2021-11-22 18:59:43 INFO  LoginService:16 - Entering handleLoginPost Handler.
+2021-11-22 18:59:43 INFO  UserDAO:29 - Username match found.
+2021-11-22 18:59:43 INFO  LoginService:23 - Authentication successful. Redirected to '/requests.html'
+2021-11-22 18:59:43 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 18:59:43 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 18:59:43 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 18:59:43 INFO  EmployeeDAO:70 - 11111111 has 0 reimbursement requests.
+2021-11-22 19:03:05 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:03:05 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:03:05 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:03:05 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:03:50 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:03:50 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:03:50 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:03:50 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:04:08 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:04:08 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:04:08 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:04:08 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:04:27 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:04:27 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:04:27 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:04:27 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:04:38 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:04:38 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:04:38 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:04:38 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:04:57 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:04:57 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:04:57 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:04:57 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:06:43 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:06:43 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:06:43 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:06:43 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:07:00 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:07:00 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:07:00 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:07:00 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:07:12 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:07:12 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:07:12 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:07:12 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:07:39 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:07:39 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:07:39 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:07:39 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:08:03 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:08:03 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:08:03 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:08:03 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:08:14 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:08:14 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:08:14 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:08:14 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:08:52 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:08:52 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:08:52 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:08:52 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:09:13 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:09:13 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:09:13 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:09:13 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:09:56 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:09:56 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:09:56 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:09:56 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:10:06 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:10:06 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:10:06 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:10:06 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:10:29 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:10:29 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:10:29 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:10:29 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:10:43 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:10:43 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:10:43 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:10:43 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:11:10 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:11:10 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:11:10 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:11:10 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:11:39 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:11:39 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:11:39 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:11:39 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:11:39 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:11:39 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:11:39 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:16:23 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:16:23 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:16:23 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:16:23 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:16:23 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:16:23 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:16:23 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:16:26 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:16:26 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:16:26 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:16:26 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:16:28 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:16:28 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:16:28 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:16:28 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:16:28 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:16:28 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:16:28 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:16:44 INFO  RequestService:44 - Entering 'updateRequestStatus' Handler.
+2021-11-22 19:16:44 INFO  RequestService:49 - Sending status update to EmployeeController
+2021-11-22 19:16:44 INFO  EmployeeController:46 - Entering updateRequestStatusToEmployeeController() method in EmployeeController.
+2021-11-22 19:16:44 INFO  EmployeeController:48 - Sending status update to EmployeeDAO
+2021-11-22 19:16:44 INFO  EmployeeDAO:112 - Entering updateRequest() method for request with id: 45362945.
+2021-11-22 19:16:44 INFO  EmployeeDAO:117 - Setting property values for request with id: 45362945.
+2021-11-22 19:16:44 INFO  EmployeeDAO:123 - Persisting.
+2021-11-22 19:16:44 INFO  EmployeeDAO:125 - Committing.
+2021-11-22 19:16:44 INFO  EmployeeDAO:127 - Transaction successful.
+2021-11-22 19:16:44 INFO  EmployeeDAO:140 - Returning to EmployeeController.
+2021-11-22 19:16:44 INFO  RequestService:51 - Sending updated status to /management.html
+2021-11-22 19:16:44 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:16:44 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:16:44 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:16:44 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:16:44 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:16:44 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:16:44 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:16:48 INFO  RequestService:44 - Entering 'updateRequestStatus' Handler.
+2021-11-22 19:16:48 INFO  RequestService:49 - Sending status update to EmployeeController
+2021-11-22 19:16:48 INFO  EmployeeController:46 - Entering updateRequestStatusToEmployeeController() method in EmployeeController.
+2021-11-22 19:16:48 INFO  EmployeeController:48 - Sending status update to EmployeeDAO
+2021-11-22 19:16:48 INFO  EmployeeDAO:112 - Entering updateRequest() method for request with id: 45362945.
+2021-11-22 19:16:48 INFO  EmployeeDAO:117 - Setting property values for request with id: 45362945.
+2021-11-22 19:16:48 INFO  EmployeeDAO:123 - Persisting.
+2021-11-22 19:16:48 INFO  EmployeeDAO:125 - Committing.
+2021-11-22 19:16:48 INFO  EmployeeDAO:127 - Transaction successful.
+2021-11-22 19:16:48 INFO  EmployeeDAO:140 - Returning to EmployeeController.
+2021-11-22 19:16:48 INFO  RequestService:51 - Sending updated status to /management.html
+2021-11-22 19:16:48 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:16:48 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:16:48 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:16:48 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:16:48 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:16:48 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:16:48 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:17:27 INFO  RequestService:44 - Entering 'updateRequestStatus' Handler.
+2021-11-22 19:17:27 INFO  RequestService:49 - Sending status update to EmployeeController
+2021-11-22 19:17:27 INFO  EmployeeController:46 - Entering updateRequestStatusToEmployeeController() method in EmployeeController.
+2021-11-22 19:17:27 INFO  EmployeeController:48 - Sending status update to EmployeeDAO
+2021-11-22 19:17:27 INFO  EmployeeDAO:112 - Entering updateRequest() method for request with id: 45362945.
+2021-11-22 19:17:27 INFO  EmployeeDAO:117 - Setting property values for request with id: 45362945.
+2021-11-22 19:17:27 INFO  EmployeeDAO:123 - Persisting.
+2021-11-22 19:17:27 INFO  EmployeeDAO:125 - Committing.
+2021-11-22 19:17:27 INFO  EmployeeDAO:127 - Transaction successful.
+2021-11-22 19:17:27 INFO  EmployeeDAO:140 - Returning to EmployeeController.
+2021-11-22 19:17:27 INFO  RequestService:51 - Sending updated status to /management.html
+2021-11-22 19:17:27 INFO  RequestService:35 - Entering managementView Handler.
+2021-11-22 19:17:27 INFO  EmployeeController:37 - Entering getEmployeeDAOAllRequests() method in EmployeeController.
+2021-11-22 19:17:27 INFO  EmployeeDAO:87 - Searching for reimbursement requests for all employees.
+2021-11-22 19:17:27 INFO  EmployeeDAO:94 - Getting ResultList.
+2021-11-22 19:17:27 INFO  EmployeeDAO:96 - Sending results to EmployeeController.
+2021-11-22 19:17:27 INFO  EmployeeController:40 - Returning all requests to RequestService.
+2021-11-22 19:17:27 INFO  RequestService:38 - Providing all reimbursement request results to '/management.html'
+2021-11-22 19:18:10 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:18:10 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:18:10 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:18:10 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:20:11 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:20:11 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:20:11 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 11111111.
+2021-11-22 19:20:11 INFO  EmployeeDAO:70 - 11111111 has 1 reimbursement requests.
+2021-11-22 19:21:33 INFO  LoginService:16 - Entering handleLoginPost Handler.
+2021-11-22 19:21:33 INFO  UserDAO:29 - Username match found.
+2021-11-22 19:21:33 INFO  LoginService:23 - Authentication successful. Redirected to '/requests.html'
+2021-11-22 19:21:33 INFO  RequestService:18 - Entering serveRequestPage Handler.
+2021-11-22 19:21:33 INFO  EmployeeController:21 - Entering getEmployeeRequestsDAO() method in EmployeeController
+2021-11-22 19:21:33 INFO  EmployeeDAO:62 - Searching for reimbursement requests for 22222222.
+2021-11-22 19:21:33 INFO  EmployeeDAO:70 - 22222222 has 0 reimbursement requests.
